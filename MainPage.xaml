@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Frame>
+                <Label
+                Text="Term Tracker"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            </Frame>
+
+            <Button 
+                HeightRequest="60"
+                WidthRequest="150"
+                Text="Progress"
+                FontSize="30"
+                Command="{Binding GoToProgressCommand}"/>
+
+            <CollectionView ItemsSource="{Binding TermsData}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="20, 15, 20, 10"
+                            HeightRequest="115"
+                            WidthRequest="280"
+                            BorderColor="Black" >
+                            <VerticalStackLayout>
+
+                                <Label 
+                                FontSize="30"
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"/>
+
+                                <Label   
+                                FontSize="20"
+                                VerticalOptions="End" 
+                                HorizontalOptions="Center"
+                                Margin="0,0,0,25">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Start.Month}"/>
+                                            <Span Text="/"/>
+                                            <Span Text="{Binding Start.Day}"/>
+                                            <Span Text="/"/>
+                                            <Span Text="{Binding Start.Year}"/>
+                                            <Span Text=" - "/>
+                                            <Span Text="{Binding End.Month}"/>
+                                            <Span Text="/"/>
+                                            <Span Text="{Binding End.Day}"/>
+                                            <Span Text="/"/>
+                                            <Span Text="{Binding End.Year}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding TermId}"/>
+                  
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        
+            <Button 
+                x:Name="AddTermButton"
+                Text="+"
+                FontSize="50"
+                FontAttributes="Bold"
+                WidthRequest="90"
+                HeightRequest="90"
+                CornerRadius="20"
+                Command="{Binding AddTermCommand}"
+            />
+           
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

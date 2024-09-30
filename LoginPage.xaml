@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.LoginPage"
+             Title="Login Page">
+    <VerticalStackLayout>
+
+
+
+        <Label 
+            Text="Username:"
+            FontSize="30"
+            Margin=" 15,40,0,0"/>
+        <Entry 
+            FontSize="25"
+            Margin="10,0"
+            Text="{Binding CurrentUser.Username}"/>
+        <Label 
+            Text="Password:"
+            FontSize="30"
+            Margin="15,20,0,0"/>
+        <Entry 
+            FontSize="25"
+            Margin="10,0"
+            Text="{Binding CurrentUser.Password}"/>
+
+
+        <Button
+            FontSize="35"
+            Text="Login"
+            HorizontalOptions="Center"
+            Margin="0,25"
+            HeightRequest="70"
+            WidthRequest="180"
+            Command="{Binding LoginCommand}"/>
+
+        <Button 
+            FontSize="28"
+            Text="New User"
+            HorizontalOptions="Center"
+            Margin="0,35,0,0"
+            Command="{Binding AddUserCommand}"/>
+
+    </VerticalStackLayout>
+</ContentPage>
