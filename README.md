@@ -17,6 +17,6 @@ This is a mobile application that students can use to track terms. They can do t
 - <b>Windows 11</b>
 - <b>Visual Studio</b>
 
-<h2>Here are some photos:</h2>
+<h2>Here is a video demonstration:</h2>
 
 [https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ac28cb19-03f6-439d-8074-b1f100070da3]
