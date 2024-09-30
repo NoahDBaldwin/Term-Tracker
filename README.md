@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This is a mobile application that students can use to track terms. They can do this by adding, editing, and deleting an account, terms, add courses and assessments to the terms, enable notifications, and share notes. 
+This is a mobile application that students can use to track terms. They can do this by adding, editing, and deleting an account, terms, add courses and assessments to the terms, enable notifications, and share notes. An SQLite database is used for the data.
 <br />
 
 
